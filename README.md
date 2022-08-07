@@ -48,7 +48,8 @@ WHERE NOT (CITY LIKE 'A%' OR  CITY  LIKE 'E%' OR CITY  LIKE 'I%' OR CITY  LIKE '
 ### 14. Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
 
 ```
-SELECT DISTINCT CITY FROM STATION WHERE LEFT(CITY, 1) NOT IN ('A', 'E', 'I', 'O', 'U') OR RIGHT(CITY, 1) NOT IN ('a', 'e', 'i', 'o', 'u');
+SELECT DISTINCT CITY FROM STATION WHERE LEFT(CITY, 1) NOT IN ('A', 'E', 'I', 'O', 'U')
+OR RIGHT(CITY, 1) NOT IN ('a', 'e', 'i', 'o', 'u');
 ```
 
 ### 15. Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
@@ -60,15 +61,15 @@ SELECT DISTINCT CITY FROM STATION WHERE RIGHT(CITY, 1) NOT IN ('a', 'e', 'i', 'o
 ### 16. Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
 
 ```
-SELECT DISTINCT CITY FROM STATION WHERE LEFT(CITY, 1) NOT IN ('A', 'E', 'I', 'O', 'U') OR RIGHT(CITY, 1) NOT IN ('a', 'e', 'i', 'o', 'u');
+SELECT DISTINCT CITY FROM STATION WHERE LEFT(CITY, 1) NOT IN ('A', 'E', 'I', 'O', 'U')
+OR RIGHT(CITY, 1) NOT IN ('a', 'e', 'i', 'o', 'u');
 ```
 
-### 13. Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+### 17. Query the list of CITY names from STATION that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.
 
 ```
-SELECT DISTINCT CITY
-FROM STATION
-WHERE NOT (CITY LIKE 'A%' OR  CITY  LIKE 'E%' OR CITY  LIKE 'I%' OR CITY  LIKE 'O%' OR CITY  LIKE 'U%');
+select distinct city from station where (left(city,1) not in ('a','e','i','o','u')
+and  right(city,1) not in ('a','e','i','o','u'));
 ```
 
 ### 13. Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
